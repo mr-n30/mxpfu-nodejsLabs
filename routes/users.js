@@ -26,20 +26,24 @@ let users = [
 // GET request: Retrieve all users
 router.get("/",(req,res)=>{
   // Copy the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  res.send(users)//This line is to be replaced with actual return value
 });
 
 // GET by specific ID request: Retrieve a single user with email ID
 router.get("/:email",(req,res)=>{
   // Copy the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  res.send(users.filter(item => item.email === req.params.email))//This line is to be replaced with actual return value
 });
 
 
 // POST request: Create a new user
 router.post("/",(req,res)=>{
-  // Copy the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  // // Copy the code here
+
+  // console.log(typeof req.body, req.body)
+  // if (typeof req.body === 'object' && req.body.length > 0)
+  //   users.push({firstName: req.body.firstName, lastName: req.body.lastName, email: req.body.email, DOB: req.body.DOB})
+  // res.send("User created!")//This line is to be replaced with actual return value
 });
 
 
